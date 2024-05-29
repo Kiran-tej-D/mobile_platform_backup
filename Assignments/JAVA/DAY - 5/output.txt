@@ -1,0 +1,12 @@
+all: 2
+Hi: 1
+hi: 1
+of: 1
+name: 1
+is: 1
+hello: 2
+to: 1
+my: 2
+welcome: 1
+you: 1
+party: 1

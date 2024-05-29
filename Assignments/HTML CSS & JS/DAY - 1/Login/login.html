@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../Login/login.css">
+    <script>
+        function login() {
+
+            let email = (document.getElementById("a").value);
+            let pass = (document.getElementById("b").value);
+
+            if (email === "asd" && pass === "123") {
+                alert("Hello " + email + "\nLogin succuessfully");
+
+            } else {
+                alert("hello");
+                alert("Wrong credentials");
+            }
+        }
+        function work() {
+            // range(0-9), times = 10
+            /* for(let i = 0; i < 10; i++) {
+                console.log("hello") // print
+            } */
+            // let arr = ["Aaryan", 56, true, -1, 2];
+
+            // arr.forEach(e => console.log(e));
+            // arr.filter(e => e % 2 == 0).map(e =>  e * 2).forEach(e => console.log(e));
+            // arr.slice(4).forEach(e => console.log(e));
+            // console.log(arr.findIndex(e => e %2 == 0))
+            // arr.reverse().forEach(e => console.log(e));
+
+            document.getElementById("clickbtn").innerText = "clicked"
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+    <div class="log">
+        <input class="input" id="a" type="input" placeholder="Username" required> <br />
+        <input class="input" id="b" type="password" placeholder="password" required> <br />
+        <button id="btn" onclick="login()">
+            <a href="../Login/home.html">Login</a>
+        </button>
+        <button id="clickbtn" onclick="work()">
+            <a href="#">Login</a>
+        </button>
+
+    </div>
+</body>
+
+</html>

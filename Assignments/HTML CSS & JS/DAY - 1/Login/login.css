@@ -1,0 +1,48 @@
+body{
+    background-color: aquamarine;
+}
+.log{
+    border: 1px solid black;
+    width: 200px;
+    align-content: center;
+    text-align: center;
+    margin-left: 40%;
+    background-color: white;
+}
+.input{
+    margin-top: 20px;
+}
+
+#btn{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 30px;
+}
+
+#btn:hover{
+    background-color: aqua;
+}
+
+#btn a{
+    text-decoration: none;
+}
+
+#clickbtn{
+    margin-top: 15px;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 30px;
+}
+
+#clickbtn:hover{
+    background-color: rgb(17, 130, 130);
+}
+
+#clickbtn a{
+    text-decoration: none;
+    width: 80px;
+}
+#clickbtn a:hover{
+    color: aliceblue;
+}

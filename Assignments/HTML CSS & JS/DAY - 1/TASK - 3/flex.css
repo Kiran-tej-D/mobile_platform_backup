@@ -1,0 +1,21 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+.col
+{
+    flex: 1;
+    padding: 15px;
+    margin-right: 25px;
+    background-color: antiquewhite;
+}
+
+/* .col:last-child{
+    margin-left: 0px;
+} */

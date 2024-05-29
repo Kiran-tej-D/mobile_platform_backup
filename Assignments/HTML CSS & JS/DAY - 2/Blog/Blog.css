@@ -1,0 +1,28 @@
+.cimg{
+    max-height: 530px;
+    width: 100%;
+    align-items: center;
+}
+.caro{
+    margin-left: 10%;
+    width: 1300px;
+    height: 550px;
+}
+.article 
+{
+    margin-left: 10%;
+    width: 1300px; 
+    background-color: aqua;  
+}
+.history{
+    margin-left: 10%;
+    width: 1300px; 
+    background-color: rgb(197, 224, 224); 
+}
+.card{
+    margin-left: 10%;
+    width: 1300px;  
+}
+html{
+    scroll-behavior: smooth;
+}
