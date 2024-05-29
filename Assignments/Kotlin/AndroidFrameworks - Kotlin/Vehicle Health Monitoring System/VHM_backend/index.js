@@ -6,7 +6,7 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-const DB_NAME = process.env.DB_NAME || vhmSystem;
+//const DB_NAME = process.env.DB_NAME || vhmSystem;
 
 //Body parser middleware
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -22,7 +22,8 @@ mongoose.connect(URL).then(() => {
 });
 
 //Register Vehicle
-//->   http://localhost:3000/register
+//->   http://localhost:3000/register (For thunderClient)
+//->   https://backend-xzyk.onrender.com/register
 app.post('/register', async (req, res) => {
     try {
         const vehicle = new Vehicle(req.body);
@@ -35,6 +36,7 @@ app.post('/register', async (req, res) => {
 
 // Searching ID (chassis number)
 //->   http://localhost:3000/id/
+//->   https://backend-xzyk.onrender.com/id/
 app.get('/id/:chassisNumber', async (req, res) => {
     const num = req.params.chassisNumber;
     const fields = 'name vehicleType registerNumber vehicleModel email';
@@ -49,6 +51,7 @@ app.get('/id/:chassisNumber', async (req, res) => {
 
 //login
 //->   http://localhost:3000/login
+//->   https://backend-xzyk.onrender.com/login
 app.post('/login', async (req, res) => {
     try {
         const { email, password } = req.body;
@@ -59,7 +62,7 @@ app.post('/login', async (req, res) => {
             return res.status(401).json({ message: 'Invalid email or password' });
         }
 
-        // Simple password comparison (not secure, for demonstration only)
+        // Simple password comparison 
         if (user.password === password) {
             // Login successful, send response (without password)
             res.json({ message: 'Login successful', data: { name: user.name, email: user.email } }); // Exclude password from response
@@ -71,19 +74,18 @@ app.post('/login', async (req, res) => {
         res.status(500).json({ message: 'Internal server error' });
     }
 });
-    
 
+//for execute purpose
+app.get("/", (req, res) => {
+    res.end("Hello world")
+})
+app.get("/about", (req, res) => {
+    res.end("welcome to about page")
+})
+app.get("/name/:myname", (req, res) => {
+    res.end("welcome " + req.params.myname)
+})
 
+app.listen(PORT, () => { console.log(`Server is running on port ${PORT}`); });
 
-    //for execute purpose
-    app.get("/", (req, res) => {
-        res.end("Hello world")
-    })
-    app.get("/about", (req, res) => {
-        res.end("welcome to about page")
-    })
-    app.get("/name/:myname", (req, res) => {
-        res.end("welcome " + req.params.myname)
-    })
-
-    app.listen(PORT, () => { console.log(`Server is running on port ${PORT}`); });
+//working API link is => https://backend-xzyk.onrender.com <=

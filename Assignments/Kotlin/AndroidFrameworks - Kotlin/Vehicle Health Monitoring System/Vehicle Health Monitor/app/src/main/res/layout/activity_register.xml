@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@drawable/vhmregister">
 
-
     <EditText
         android:id="@+id/name"
         android:layout_width="260dp"

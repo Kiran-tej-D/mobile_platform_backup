@@ -10,22 +10,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class DashActivity : AppCompatActivity() {
+class ProfileActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_dash)
-        val btn1 = findViewById<Button>(R.id.vehiclestatus)
+        setContentView(R.layout.activity_profile)
 
+        val btn1 = findViewById<Button>(R.id.back)
         btn1.setOnClickListener {
-            startActivity(Intent(this, StatusActivity::class.java))
+            startActivity(Intent(this, DashActivity::class.java))
         }
-        val btn2 = findViewById<Button>(R.id.profile)
-
-        btn2.setOnClickListener {
-            startActivity(Intent(this, ProfileActivity::class.java))
-        }
-
     }
 }
